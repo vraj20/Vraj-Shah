@@ -1,0 +1,138 @@
+Home Assignment-1 
+Name –Vraj Shah
+ID-121063
+
+
+
+1.
+Parent sees i = 0
+Child sees i = 0
+Parent sees i = 1
+Child sees i = 1
+Parent sees i = 1
+Parent sees i = 2
+Child sees i = 1
+Child sees i = 2
+Parent sees i = 2
+Parent sees i = 2
+Child sees i = 2
+Parent sees i = 2
+Child sees i = 2
+Child sees i = 2
+
+In the first code When every time fork () is called, there are basically two processes which are executed. They share the Instruction but data can be different and that’s what we are getting in the output.
+Data is different of both but both process are executed.
+VFork() is the function that creates child first then parents. And we got different values after running it over and over. 
+
+
+2.
+Parent says a: 1
+Id: 1 a: 2 b: 1
+Id: 2 a: 2 b: 1
+
+In the Second Code we are getting this output but it goes into the infinite loop so we have to break it
+Because the join process of both the threads will not happen until it gets out from while loop.
+Inspite of that both threads individually are executing and so we are getting those values of ids.
+
+
+3.
+
+
+In the M: N implementation, the threading library is responsible for scheduling user threads on the available schedulable entities; this makes context switching of threads very fast, as it avoids system calls.
+
+Works well given many short-lived user threads mapped to constant-size p. thus we can say that it is the best idea to implement hybrid model of threads.
+	
+
+
+
+
+
+
+User-level threads are unknown to the OS and are created and managed by a threads library that runs in the user space of a process. User-level threads are very efficient because a mode switch is not required to switch from one thread to another. However, only a single user-level thread within a process can execute at a time, and if one thread blocks, the entire process is blocked. Kernel-level threads are threads within a process that are maintained by the kernel. Because they are recognized by the kernel, multiple threads within the same process can execute in parallel on a multiprocessor and the blocking of a thread does not block the entire process. However, a mode switch is required to switch from one thread to another.
+
+Considering this Conclusion,
+1.	m>>n
+It is not better because if one thread is blocked then entire process will be blocked in ULT.
+
+2.	m>n
+I think it is the best. Because considering both trade-off it gives the maximum efficiency.
+
+3.	m=n
+Up to some extend it is better but here in this case mapping is one to one. So it is a little bit slower than above.
+
+4.	m<n
+Increasing kernel level thread leads us to slower the speed due to context switching of multithread.
+
+5.	m<<n
+speed will be slow down very gradually. 
+
+
+Home Assignment-1 
+Name –Vraj Shah
+ID-121063
+
+
+
+1.
+Parent sees i = 0
+Child sees i = 0
+Parent sees i = 1
+Child sees i = 1
+Parent sees i = 1
+Parent sees i = 2
+Child sees i = 1
+Child sees i = 2
+Parent sees i = 2
+Parent sees i = 2
+Child sees i = 2
+Parent sees i = 2
+Child sees i = 2
+Child sees i = 2
+
+In the first code When every time fork () is called, there are basically two processes which are executed. They share the Instruction but data can be different and that’s what we are getting in the output.
+Data is different of both but both process are executed.
+VFork() is the function that creates child first then parents. And we got different values after running it over and over. 
+
+
+2.
+Parent says a: 1
+Id: 1 a: 2 b: 1
+Id: 2 a: 2 b: 1
+
+In the Second Code we are getting this output but it goes into the infinite loop so we have to break it
+Because the join process of both the threads will not happen until it gets out from while loop.
+Inspite of that both threads individually are executing and so we are getting those values of ids.
+
+
+3.
+
+
+In the M: N implementation, the threading library is responsible for scheduling user threads on the available schedulable entities; this makes context switching of threads very fast, as it avoids system calls.
+
+Works well given many short-lived user threads mapped to constant-size p. thus we can say that it is the best idea to implement hybrid model of threads.
+	
+
+
+
+
+
+
+User-level threads are unknown to the OS and are created and managed by a threads library that runs in the user space of a process. User-level threads are very efficient because a mode switch is not required to switch from one thread to another. However, only a single user-level thread within a process can execute at a time, and if one thread blocks, the entire process is blocked. Kernel-level threads are threads within a process that are maintained by the kernel. Because they are recognized by the kernel, multiple threads within the same process can execute in parallel on a multiprocessor and the blocking of a thread does not block the entire process. However, a mode switch is required to switch from one thread to another.
+
+Considering this Conclusion,
+1.	m>>n
+It is not better because if one thread is blocked then entire process will be blocked in ULT.
+
+2.	m>n
+I think it is the best. Because considering both trade-off it gives the maximum efficiency.
+
+3.	m=n
+Up to some extend it is better but here in this case mapping is one to one. So it is a little bit slower than above.
+
+4.	m<n
+Increasing kernel level thread leads us to slower the speed due to context switching of multithread.
+
+5.	m<<n
+speed will be slow down very gradually. 
+
+
